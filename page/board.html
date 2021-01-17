@@ -1,0 +1,49 @@
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>My talking Board</title>
+	  <link rel = "stylesheet" type = "text/css" href = "broadstyle.css">
+          <script src="board.js"></script>
+   </head>
+
+   <body>
+   <div id="beforeData"></div>
+   <div id="show"></div><br/>
+   <h1 class="left">留 言 板</h1>
+      <p class="left">請輸入您的留言給版主</p>
+     
+      <div class="end">
+          <form action="javascript:showUser()">
+         <p>Name: 
+               <input name = "name" type = "text" size = "25" id="name" required>
+			   <span>*</span>
+			   
+         </p>
+         <p>e-mail:
+               <input name = "email" type = "email" placeholder = "name@domain.com" size = "25" id="email">
+         </p>
+         <p>留 言<span>*</span><br>
+            <textarea name = "comments"
+               rows = "4" cols = "36" id="com" required></textarea>
+         </p>
+
+         <p>
+            你的性別:<span>*</span>
+               <input name = "sex" type = "radio"
+                  value = "boy" id="boy" required >boy
+               <input name = "sex" type = "radio" 
+                  value = "girl" id="girl" required >girl
+         </p>
+
+         <p>
+             <input type = "Submit" value = "提交"/>
+           
+         </p>   
+         
+      </form>
+	</div>
+      <div class="end">
+      <a href="login.html">連結至後台</a>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,27 @@
+table  {
+         border-style: double;
+		 width: 45%;
+		 height:20%;
+		 border-width: 6px;
+		 position: relative; 
+		 border-color: #C99506;
+                   left: 27.5%;
+
+}
+body {
+         text-align: center;
+		 font-family: arial, sans-serif;
+         background-image: url("pic/indexback.jpeg");
+		 background-repeat: no-repeat; 
+		 background-attachment: fixed;
+		 background-position: bottom center;
+}
+a{
+         text-decoration: none;
+		 color: grey;
+}
+table tbody tr td:hover{
+         background-color: #F5D98C;
+}
+
+

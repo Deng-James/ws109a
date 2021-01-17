@@ -1,0 +1,28 @@
+body {
+         
+		 font-family: arial, sans-serif;
+         background-image: url("pic/talkback.jpg");
+		 background-repeat: no-repeat; 
+		 background-attachment: fixed;
+		 background-position: top right;
+		 text-align:center;	 
+}
+
+div{
+        border-style:ridge;
+		border-width:2px;
+		 width: 45%;
+		 position: relative; 
+		 border-color:#C121CD;
+                   left: 20%;
+}
+h2{
+        color: #8904B1;               
+                  }
+span{
+        color: red;       
+                  }
+                  input{
+                      margin-top: 10px;
+                      margin-bottom: 6px;
+                  }

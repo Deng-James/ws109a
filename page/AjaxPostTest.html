@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--information
+  1.Ajax POST can work!
+  2.if use xmlhttp.send() in POST,we have to set setRequestHeader 
+  3.Jquery有更方便的現成Ajax套件可使用!也是大部分人使用ajax的方法
+-->
+<html>
+<head>
+<meta charset = "utf-8">
+<script>
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText; //responseXLM別用~常有問題
+    }
+  }
+//基本上傳值和get寫法同，放在send內傳送
+var s=document.getElementById("form")[0].value;
+var s1=document.getElementById("form")[1].value; //變數要額外隔出來，不要直接放send內
+xmlhttp.open("POST","demo_post2.asp",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+  
+//如果要send json 請用xmlhttp.setRequestHeader("Content-type", "application/json");
+//xmlhttp.send(JSON.stringify(object)); 傳到server後再用parse解析回json
+  
+  xmlhttp.send("put="+s+"&file="+s1); //固定形式
+}
+</script>
+</head>
+<body>
+
+<h2>AJAX</h2>
+ <form action="javascript:loadXMLDoc()" method="post" enctype="multipart/form-data" id="form">
+            <div>
+        未留言板顏色<input type="text" name="put" id="put" /><br/>
+        已留言板顏色<input type="text" name="fine" id="fine" /><br/>
+        背景<input type="file" name="file" id="file" multiple="multiple" /></div><!--上傳file-->
+        <input type="submit" name="submit" value="送出" id="submit"/>
+        </form>
+<div id="myDiv"></div>
+ 
+</body>
+</html>

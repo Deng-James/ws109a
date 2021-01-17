@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>You are log in!</title>
+        <link rel = "stylesheet" type = "text/css" href = "logstyle.css">
+        <script>
+        function goback()
+        {
+          document.location.href="board.html"; //把畫面導到其他網頁
+        }
+        </script>
+    </head>
+    <body>
+
+        <form action="loginback.js" method="post" enctype="multipart/form-data" ><!--直接POST傳送form表單物件，javascript直接ajax傳送POST無效-->
+            <div>
+         <span></span><br/>
+        未留言板顏色<input type="text" name="put" id="put" required /><span>*</span><br/>
+        已留言板顏色<input type="text" name="fine" id="fine" required /><span>*</span><br/>
+        <span>*</span>背景<input type="file" name="file" id="file" multiple="multiple" required /></div><!--上傳file-->
+        <input type="submit" name="submit" value="送出" id="submit"/>　<input type="button" onclick="goback()" value="回留言板" />
+        </form>
+    </body>
+</html>
